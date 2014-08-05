@@ -221,7 +221,11 @@ class Widget_Name extends WP_Widget {
 	 */
 	public function register_admin_styles() {
 
-		wp_enqueue_style( $this->get_widget_slug().'-admin-styles', plugins_url( 'css/admin.css', __FILE__ ) );
+        if ( 'local' == WP_ENV ) {
+            wp_enqueue_style( $this->get_widget_slug().'-admin-styles', plugins_url( 'assets/dev/admin.css', __FILE__ ) );
+        } else {
+            wp_enqueue_style( $this->get_widget_slug().'-admin-styles', plugins_url( 'assets/dist/admin.min.css', __FILE__ ) );
+        }
 
 	} // end register_admin_styles
 
@@ -230,7 +234,11 @@ class Widget_Name extends WP_Widget {
 	 */
 	public function register_admin_scripts() {
 
-		wp_enqueue_script( $this->get_widget_slug().'-admin-script', plugins_url( 'js/admin.js', __FILE__ ), array('jquery') );
+        if ( 'local' == WP_ENV ) {
+            wp_enqueue_script( $this->get_widget_slug().'-admin-script', plugins_url( 'assets/dev/admin.js', __FILE__ ), array('jquery') );
+        } else {
+            wp_enqueue_script( $this->get_widget_slug().'-admin-script', plugins_url( 'assets/dist/admin.min.js', __FILE__ ), array('jquery') );
+        }
 
 	} // end register_admin_scripts
 
@@ -239,7 +247,11 @@ class Widget_Name extends WP_Widget {
 	 */
 	public function register_widget_styles() {
 
-		wp_enqueue_style( $this->get_widget_slug().'-widget-styles', plugins_url( 'css/widget.css', __FILE__ ) );
+        if ( 'local' == WP_ENV ) {
+            wp_enqueue_style( $this->get_widget_slug().'-widget-styles', plugins_url( 'assets/dev/style.css', __FILE__ ) );
+        } else {
+            wp_enqueue_style( $this->get_widget_slug().'-widget-styles', plugins_url( 'assets/dist/style.min.css', __FILE__ ) );
+        }
 
 	} // end register_widget_styles
 
@@ -248,7 +260,13 @@ class Widget_Name extends WP_Widget {
 	 */
 	public function register_widget_scripts() {
 
-		wp_enqueue_script( $this->get_widget_slug().'-script', plugins_url( 'js/widget.js', __FILE__ ), array('jquery') );
+        if ( 'local' == WP_ENV ) {
+            wp_enqueue_script( $this->get_widget_slug().'-script', plugins_url( 'assets/dev/header.js', __FILE__ ), array('jquery') );
+            wp_enqueue_script( $this->get_widget_slug().'-script', plugins_url( 'assets/dev/footer.js', __FILE__ ), array('jquery') );
+        } else {
+            wp_enqueue_script( $this->get_widget_slug().'-script', plugins_url( 'assets/dist/header.min.js', __FILE__ ), array('jquery') );
+            wp_enqueue_script( $this->get_widget_slug().'-script', plugins_url( 'assets/dist/footer.min.js', __FILE__ ), array('jquery') );
+        }
 
 	} // end register_widget_scripts
 
@@ -257,9 +275,6 @@ class Widget_Name extends WP_Widget {
 // TODO: Remember to change 'Widget_Name' to match the class name definition
 add_action( 'widgets_init', create_function( '', 'register_widget("Widget_Name");' ) );
 
-
-
-<?php
 /**
  * Magellan Scroll Nav Functions
  * Example: <?php magellan_scroll_nav(); ?>
