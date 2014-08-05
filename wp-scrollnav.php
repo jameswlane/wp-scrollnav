@@ -5,23 +5,23 @@
  * The WordPress Widget Boilerplate is an organized, maintainable boilerplate for building widgets using WordPress best practices.
  *
  * @package   Widget_Name
- * @author    Your Name <email@example.com>
+ * @author    James W. Lane <james.w.lane@mac.com>
  * @license   GPL-2.0+
  * @link      http://example.com
- * @copyright 2014 Your Name or Company Name
+ * @copyright 2014 James W. Lane
  *
  * @wordpress-plugin
- * Plugin Name:       @TODO
+ * Plugin Name:       wp-scrollnav
  * Plugin URI:        @TODO
- * Description:       @TODO
+ * Description:       Sidebar scrollnav
  * Version:           1.0.0
- * Author:            @TODO
- * Author URI:        @TODO
+ * Author:            James W. Lane
+ * Author URI:        http://jameswlane.com
  * Text Domain:       widget-name
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Domain Path:       /lang
- * GitHub Plugin URI: https://github.com/<owner>/<repo>
+ * GitHub Plugin URI: https://github.com/jameswlane/wp-scrollnav
  */
 
 // TODO: change 'Widget_Name' to the name of your plugin
@@ -427,4 +427,3 @@ function test_before_widget( $output ) {
 };
 add_filter('magellan_after_toc', 'test_before_widget', 10, 1);
 */
-?>
