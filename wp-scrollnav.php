@@ -25,7 +25,7 @@
  */
 
 // TODO: change 'Widget_Name' to the name of your plugin
-class Widget_Name extends WP_Widget {
+class WP_ScrollNav extends WP_Widget {
 
     /**
      * @TODO - Rename "widget-name" to the name your your widget
@@ -273,7 +273,7 @@ class Widget_Name extends WP_Widget {
 } // end class
 
 // TODO: Remember to change 'Widget_Name' to match the class name definition
-add_action( 'widgets_init', create_function( '', 'register_widget("Widget_Name");' ) );
+add_action( 'widgets_init', create_function( '', 'register_widget("WP_ScrollNav");' ) );
 
 /**
  * Magellan Scroll Nav Functions
