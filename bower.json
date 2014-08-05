@@ -1,0 +1,14 @@
+{
+  "name": "wp-scrollnav",
+  "version": "1.0.0",
+  "shortName": "wpsn",
+  "author": {
+    "name": "James W. Lane",
+    "url": "http://jameswlane.com"
+  },
+  "description": "Plugin for a sidebar scrollnav",
+  "version": "0.1.0",
+  "dependencies": {
+    "foundation": "zurb/bower-foundation"
+  }
+}
