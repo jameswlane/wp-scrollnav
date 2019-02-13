@@ -19,7 +19,7 @@
     "grunt-contrib-uglify": "4.0.0",
     "grunt-contrib-watch": "1.1.0",
     "grunt-contrib-clean": "0.7.0",
-    "grunt-contrib-sass": "0.5.1",
+    "grunt-contrib-sass": "1.0.0",
     "grunt-contrib-cssmin": "0.14.0"
   }
 }
